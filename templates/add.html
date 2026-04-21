@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add Employee</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+        background: #f4f4f4;
+      }
+      h1 {
+        color: #333;
+      }
+      form {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        max-width: 500px;
+      }
+      label {
+        display: block;
+        margin-top: 12px;
+        font-weight: bold;
+        color: #555;
+      }
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      button {
+        margin-top: 20px;
+        background: #28a745;
+        color: white;
+        padding: 10px 24px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      button:hover {
+        background: #218838;
+      }
+      a {
+        display: inline-block;
+        margin-top: 12px;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>➕ Add New Employee</h1>
+    <form method="POST" action="/add">
+      <label>Full Name</label>
+      <input type="text" name="name" placeholder="John Doe" required />
+
+      <label>Email</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="john@example.com"
+        required
+      />
+
+      <label>Phone</label>
+      <input type="text" name="phone" placeholder="+91 9999999999" required />
+
+      <label>Department</label>
+      <input type="text" name="department" placeholder="Engineering" required />
+
+      <label>Position</label>
+      <input
+        type="text"
+        name="position"
+        placeholder="Software Engineer"
+        required
+      />
+
+      <label>Salary (₹)</label>
+      <input type="number" name="salary" placeholder="50000" required />
+
+      <label>Joining Date</label>
+      <input type="date" name="joining" required />
+
+      <button type="submit">💾 Save Employee</button>
+    </form>
+    <a href="/">← Back to List</a>
+  </body>
+</html>
